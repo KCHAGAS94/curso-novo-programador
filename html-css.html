@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Novo Programador - HTML e CSS</title>
+    <link rel="stylesheet" href="html-css.css">
+</head>
+<body>
+    <header>
+        <h1>Curso: O Novo Programador - HTML E CSS</h1>
+        <br>
+    </header>
+
+    <main class="container">
+  <!-- Player de vídeo principal -->
+  <div class="video-player">
+      <h2 id="video-title">Aula 01 - O que é HTML?</h2>
+      <video id="main-video" controls width="100%">
+          <source src="videos/01 - HTML E CSS/00 - INTRODUÇÃO/01 - O QUE É HTML- - HTML e CSS.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos HTML5.
+      </video>
+  </div>
+
+  <!-- Lista de aulas -->
+  <aside class="playlist">
+      <h3>Temas e Aulas</h3>
+
+      <div class="tema">
+          <strong>00 - INTRODUÇÃO</strong>
+          <ul>
+              <li onclick="loadVideo('Aula 01 - O que é HTML?', 'videos/01 - HTML E CSS/00 - INTRODUÇÃO/01 - O QUE É HTML- - HTML e CSS.mp4')">Aula 01 - O que é HTML?</li>
+              <li onclick="loadVideo('Aula 02 - Instalando o VSCode', 'videos/01 - HTML E CSS/00 - INTRODUÇÃO/02 - INSTALANDO O VSCODE - HTML e CSS2.mp4')">Aula 02 - Instalando o VSCode</li>
+              <li onclick="loadVideo('Aula 03 - Tags', 'videos/01 - HTML E CSS/00 - INTRODUÇÃO/03 - TAGS - HTML e CSS.mp4')">Aula 03 - Tags</li>
+          </ul>
+      </div>
+
+      <div class="tema">
+          <strong>01 - ESTRUTURA</strong>
+          <ul>
+              <li onclick="loadVideo('Aula 01 - Estrutura Básica Do HTML', 'videos/01 - HTML E CSS/01 - ESTRUTURA/01 - ESTRUTURA BÁSICA DO HTML - HTML e CSS.mp4')">Aula 01 - Estrutura Básica Do HTML</li>
+              <li onclick="loadVideo('Aula 02 - Textos', 'videos/01 - HTML E CSS/01 - ESTRUTURA/02 - TEXTOS - HTML e CSS.mp4')">Aula 02 - Textos</li>
+              <li onclick="loadVideo('Aula 03 - Atributos', 'videos/01 - HTML E CSS/01 - ESTRUTURA/03 - ATRIBUTOS - HTML e CSS.mp4')">Aula 03 - Atributos</li>
+              <li onclick="loadVideo('Aula 04 - Imagens, Vídeos E Áudios', 'videos/01 - HTML E CSS/01 - ESTRUTURA/04 - IMAGENS, VÍDEOS E ÁUDIOS - HTML e CSS.mp4')">Aula 04 - Imagens, Vídeos E Áudios</li>
+              <!-- adicione mais aulas aqui -->
+          </ul>
+      </div>
+      
+      <div class="tema">
+          <strong>02 - FORMATAÇÃO</strong>
+          <ul>
+              <li onclick="loadVideo('Aula 01 - Introdução Ao CSS', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/01 - INTRODUÇÃO AO CSS - HTML e CSS.mp4')">Aula 01 - Introdução Ao CSS</li>
+              <li onclick="loadVideo('Aula 02 - Classes E IDS', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/02 - CLASSES E IDS - HTML e CSS.mp4')">Aula 02 - Classes E IDS</li>
+              <li onclick="loadVideo('Aula 03 - Cores', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/03 - CORES - HTML e CSS.mp4')">Aula 03 - Cores</li>
+              <li onclick="loadVideo('Aula 04 - Espaçamentos', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/04 - ESPAÇAMENTOS - HTML e CSS.mp4')">Aula 04 - Espaçamentos</li>
+              <li onclick="loadVideo('Aula 05 - Margens', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/05 - MARGENS - HTML e CSS.mp4')">Aula 05 - Margens</li>
+              <li onclick="loadVideo('Aula 06 - Padding', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/06 - PADDING - HTML e CSS.mp4')">Aula 06 - Padding</li>
+              <!-- adicione mais aulas aqui -->
+          </ul>
+      </div>
+      <div class="tema">
+          <strong>03 - CAMPOS</strong>
+          <ul>
+              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
+              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <!-- adicione mais aulas aqui -->
+          </ul>
+      </div>
+      <div class="tema">
+          <strong>04 - RECONSTRUINDO O YOUTUBE</strong>
+          <ul>
+              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
+              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <!-- adicione mais aulas aqui -->
+          </ul>
+      </div>
+      <div class="tema">
+          <strong>05 - FLEXBOX</strong>
+          <ul>
+              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
+              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <!-- adicione mais aulas aqui -->
+          </ul>
+      </div>
+      <div class="tema">
+          <strong>06 - RECONSTRUINDO O AIRBNB</strong>
+          <ul>
+              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
+              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <!-- adicione mais aulas aqui -->
+          </ul>
+      </div>
+      
+  </aside>
+</main>
+
+
+        <div class="quizzes">
+            <h2>Quiz: Teste seus conhecimentos</h2>
+            <form id="quizForm">
+                <label for="question1">O que é HTML?</label><br>
+                <input type="radio" name="question1" value="a"> Linguagem de Programação<br>
+                <input type="radio" name="question1" value="b"> Linguagem de Marcação<br>
+                <input type="radio" name="question1" value="c"> Banco de Dados<br><br>
+                
+                <button type="submit" class="btn">Enviar Respostas</button>
+            </form>
+        </div>
+    
+
+    <footer>
+        <p>&copy; 2025 Curso Online - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="html-css.js"></script>
+</body>
+</html>
