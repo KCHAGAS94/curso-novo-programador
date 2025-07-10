@@ -15,34 +15,40 @@
 
     <main class="container">
   <!-- Player de vídeo principal -->
-  <div class="video-player">
-      <h2 id="video-title">Aula 01 - O que é HTML?</h2>
-      <video id="main-video" controls width="100%">
-          <source src="videos/01 - HTML E CSS/00 - INTRODUÇÃO/01 - O QUE É HTML- - HTML e CSS.mp4" type="video/mp4">
-          Seu navegador não suporta vídeos HTML5.
-      </video>
-  </div>
+<div class="video-player">
+    <h2 id="video-title">Aula 01 - O que é HTML?</h2>
+    <div id="video-container">
+        <!-- Embed do YouTube -->
+        <iframe id="main-video" width="100%" height="315" 
+            src="https://www.youtube.com/embed/h_41TzVG8Gs" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
 
   <!-- Lista de aulas -->
-  <aside class="playlist">
-      <h3>Temas e Aulas</h3>
+      <aside class="playlist">
+          <h3>Temas e Aulas</h3>
 
-      <div class="tema">
-          <strong>00 - INTRODUÇÃO</strong>
-          <ul>
-              <li onclick="loadVideo('Aula 01 - O que é HTML?', 'videos/01 - HTML E CSS/00 - INTRODUÇÃO/01 - O QUE É HTML- - HTML e CSS.mp4')">Aula 01 - O que é HTML?</li>
-              <li onclick="loadVideo('Aula 02 - Instalando o VSCode', 'videos/01 - HTML E CSS/00 - INTRODUÇÃO/02 - INSTALANDO O VSCODE - HTML e CSS2.mp4')">Aula 02 - Instalando o VSCode</li>
-              <li onclick="loadVideo('Aula 03 - Tags', 'videos/01 - HTML E CSS/00 - INTRODUÇÃO/03 - TAGS - HTML e CSS.mp4')">Aula 03 - Tags</li>
-          </ul>
-      </div>
+        <div class="tema">
+              <strong>00 - INTRODUÇÃO</strong>
+              <ul>
+                  <li onclick="loadVideo('Aula 01 - O que é HTML?', 'h_41TzVG8Gs')">Aula 01 - O que é HTML?</li>
+                  <li onclick="loadVideo('Aula 02 - Instalando o VSCode', 'oNSh6WhyllA')">Aula 02 - Instalando o VSCode</li>
+                  <li onclick="loadVideo('Aula 03 - Tags', 'REypGss0gqg')">Aula 03 - Tags</li>
+              </ul>
+        </div>
 
       <div class="tema">
           <strong>01 - ESTRUTURA</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Estrutura Básica Do HTML', 'videos/01 - HTML E CSS/01 - ESTRUTURA/01 - ESTRUTURA BÁSICA DO HTML - HTML e CSS.mp4')">Aula 01 - Estrutura Básica Do HTML</li>
-              <li onclick="loadVideo('Aula 02 - Textos', 'videos/01 - HTML E CSS/01 - ESTRUTURA/02 - TEXTOS - HTML e CSS.mp4')">Aula 02 - Textos</li>
-              <li onclick="loadVideo('Aula 03 - Atributos', 'videos/01 - HTML E CSS/01 - ESTRUTURA/03 - ATRIBUTOS - HTML e CSS.mp4')">Aula 03 - Atributos</li>
-              <li onclick="loadVideo('Aula 04 - Imagens, Vídeos E Áudios', 'videos/01 - HTML E CSS/01 - ESTRUTURA/04 - IMAGENS, VÍDEOS E ÁUDIOS - HTML e CSS.mp4')">Aula 04 - Imagens, Vídeos E Áudios</li>
+              <li onclick="loadVideo('Aula 04 - Estrutura Básica Do HTML', 'dKWwX5tK9vQ')">Aula 04 - Estrutura Básica Do HTML</li>
+              <li onclick="loadVideo('Aula 05 - Textos', '9Lgv6VkxJeo')">Aula 05 - Textos</li>
+              <li onclick="loadVideo('Aula 06 - Atributos', 'X4tk7-0Q-_8')">Aula 06 - Atributos</li>
+              <li onclick="loadVideo('Aula 07 - Imagens, Vídeos E Áudios', 'Y2DuRJLgSRo')">Aula 07 - Imagens, Vídeos E Áudios</li>
               <!-- adicione mais aulas aqui -->
           </ul>
       </div>
@@ -50,44 +56,49 @@
       <div class="tema">
           <strong>02 - FORMATAÇÃO</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Introdução Ao CSS', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/01 - INTRODUÇÃO AO CSS - HTML e CSS.mp4')">Aula 01 - Introdução Ao CSS</li>
-              <li onclick="loadVideo('Aula 02 - Classes E IDS', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/02 - CLASSES E IDS - HTML e CSS.mp4')">Aula 02 - Classes E IDS</li>
-              <li onclick="loadVideo('Aula 03 - Cores', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/03 - CORES - HTML e CSS.mp4')">Aula 03 - Cores</li>
-              <li onclick="loadVideo('Aula 04 - Espaçamentos', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/04 - ESPAÇAMENTOS - HTML e CSS.mp4')">Aula 04 - Espaçamentos</li>
-              <li onclick="loadVideo('Aula 05 - Margens', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/05 - MARGENS - HTML e CSS.mp4')">Aula 05 - Margens</li>
-              <li onclick="loadVideo('Aula 06 - Padding', 'videos/01 - HTML E CSS/02 - FORMATAÇÕES/06 - PADDING - HTML e CSS.mp4')">Aula 06 - Padding</li>
+              <li onclick="loadVideo('Aula 08 - Introdução Ao CSS', '')">Aula 08 - Introdução Ao CSS</li>
+              <li onclick="loadVideo('Aula 09 - Classes E IDS', '294tFF7DeAA')">Aula 09 - Classes E IDS</li>
+              <li onclick="loadVideo('Aula 10 - Cores', '')">Aula 10 - Cores</li>
+              <li onclick="loadVideo('Aula 11 - Espaçamentos', '')">Aula 11 - Espaçamentos</li>
+              <li onclick="loadVideo('Aula 12 - Margens', '')">Aula 12 - Margens</li>
+              <li onclick="loadVideo('Aula 13 - Padding', '75OeOlOvwNs')">Aula 13 - Padding</li>
               <!-- adicione mais aulas aqui -->
           </ul>
       </div>
       <div class="tema">
           <strong>03 - CAMPOS</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
-              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <li onclick="loadVideo('14 - Checkbox ', '')">14 - Checkbox </li>
+              <li onclick="loadVideo('15 - Date E Time', '')">15 - Date E Time</li>
+              <li onclick="loadVideo('16 - File - Campo De Arquivos ', '')">16 - File - Campo De Arquivos</li>
+              <li onclick="loadVideo('17 - Hidden - O Campo Invisível ', '')">17 - Hidden - O Campo Invisível</li>
+              <li onclick="loadVideo('18 - Number - Campo De Número ', '')">18 - Number - Campo De Número</li>
+              <li onclick="loadVideo('19 - Range ', '')">19 - Range</li>
+              <li onclick="loadVideo('20 - Email E Urls ', '')">20 - Email E Urls</li>
               <!-- adicione mais aulas aqui -->
           </ul>
       </div>
       <div class="tema">
           <strong>04 - RECONSTRUINDO O YOUTUBE</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
-              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <li onclick="loadVideo('Aula 01 - Formatação de Texto', '')">Aula 01 - Formatação de Texto</li>
+              <li onclick="loadVideo('Aula 02 - Listas', '')">Aula 02 - Listas</li>
               <!-- adicione mais aulas aqui -->
           </ul>
       </div>
       <div class="tema">
           <strong>05 - FLEXBOX</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
-              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <li onclick="loadVideo('Aula 01 - Formatação de Texto', '')">Aula 01 - Formatação de Texto</li>
+              <li onclick="loadVideo('Aula 02 - Listas', '')">Aula 02 - Listas</li>
               <!-- adicione mais aulas aqui -->
           </ul>
       </div>
       <div class="tema">
           <strong>06 - RECONSTRUINDO O AIRBNB</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Formatação de Texto', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/01 - FORMATAÇÃO DE TEXTO - HTML e CSS.mp4')">Aula 01 - Formatação de Texto</li>
-              <li onclick="loadVideo('Aula 02 - Listas', 'videos/01 - HTML E CSS/02 - FORMATAÇÃO/02 - LISTAS - HTML e CSS.mp4')">Aula 02 - Listas</li>
+              <li onclick="loadVideo('Aula 01 - Formatação de Texto', '')">Aula 01 - Formatação de Texto</li>
+              <li onclick="loadVideo('Aula 02 - Listas', '')">Aula 02 - Listas</li>
               <!-- adicione mais aulas aqui -->
           </ul>
       </div>

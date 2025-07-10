@@ -5,10 +5,9 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
     alert('Respostas enviadas! Verifique o seu progresso.');
 });
 
-function loadVideo(title, src) {
+function loadVideo(title, youtubeId) {
     const videoPlayer = document.getElementById('main-video');
     const videoTitle = document.getElementById('video-title');
     videoTitle.textContent = title;
-    videoPlayer.src = src;
-    videoPlayer.play();
+    videoPlayer.src = `https://www.youtube.com/embed/${youtubeId}`;
 }
