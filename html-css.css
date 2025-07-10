@@ -62,18 +62,20 @@ h2 {
 .container {
     display: flex;
     flex-direction: row;
-    gap: 30px;
     align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 auto 50px;
+    max-width: 1400px;
 }
 
+
 .video-player {
-    flex: 2;
-    max-width: 640px;
+    flex: 4; /* aumentei de 2 para 3 */
+    max-width: 1000px; /* aumentei o limite do vídeo */
     text-align: left;
 }
+
 
 .playlist {
     flex: 1;
@@ -82,7 +84,9 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     text-align: left;
+    align-self: flex-start; /* força ela a ficar no topo */
 }
+
 
 .playlist h3,
 .playlist strong {
@@ -107,3 +111,8 @@ h2 {
     background-color: #1f3a50;
     color: #ffcc00;
 }
+
+#main-video {
+    height: 650px;
+}
+
