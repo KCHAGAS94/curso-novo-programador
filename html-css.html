@@ -5,7 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Novo Programador - HTML e CSS</title>
-    <link rel="stylesheet" href="html-css.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a1f2b;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #0a1f2b;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #f2b500;
+        }
+
+        .video-container {
+            margin: 30px 0;
+        }
+
+        .quizzes {
+            margin-top: 40px;
+            background-color: #1e2a36;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #ffcc00;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+            margin: 0 auto 50px;
+            max-width: 1400px;
+        }
+
+
+        .video-player {
+            flex: 4; /* aumentei de 2 para 3 */
+            max-width: 1000px; /* aumentei o limite do vídeo */
+            text-align: left;
+        }
+
+
+        .playlist {
+            flex: 1;
+            max-width: 400px;
+            background-color: #13222f;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            align-self: flex-start; /* força ela a ficar no topo */
+        }
+
+
+        .playlist h3,
+        .playlist strong {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .playlist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .playlist li {
+            cursor: pointer;
+            padding: 8px;
+            color: #fff;
+            border-bottom: 1px solid #2a3b4d;
+        }
+
+        .playlist li:hover {
+            background-color: #1f3a50;
+            color: #ffcc00;
+        }
+
+        #main-video {
+            height: 650px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,57 +165,81 @@
               <li onclick="loadVideo('Aula 05 - Textos', '9Lgv6VkxJeo')">Aula 05 - Textos</li>
               <li onclick="loadVideo('Aula 06 - Atributos', 'X4tk7-0Q-_8')">Aula 06 - Atributos</li>
               <li onclick="loadVideo('Aula 07 - Imagens, Vídeos E Áudios', 'Y2DuRJLgSRo')">Aula 07 - Imagens, Vídeos E Áudios</li>
-              <!-- adicione mais aulas aqui -->
+              
           </ul>
       </div>
       
       <div class="tema">
           <strong>02 - FORMATAÇÃO</strong>
           <ul>
-              <li onclick="loadVideo('Aula 08 - Introdução Ao CSS', '')">Aula 08 - Introdução Ao CSS</li>
+              <li onclick="loadVideo('Aula 08 - Introdução Ao CSS', 'sjV1bH22coo')">Aula 08 - Introdução Ao CSS</li>
               <li onclick="loadVideo('Aula 09 - Classes E IDS', '294tFF7DeAA')">Aula 09 - Classes E IDS</li>
-              <li onclick="loadVideo('Aula 10 - Cores', '')">Aula 10 - Cores</li>
-              <li onclick="loadVideo('Aula 11 - Espaçamentos', '')">Aula 11 - Espaçamentos</li>
-              <li onclick="loadVideo('Aula 12 - Margens', '')">Aula 12 - Margens</li>
+              <li onclick="loadVideo('Aula 10 - Cores', 's_0ai4-U62U')">Aula 10 - Cores</li>
+              <li onclick="loadVideo('Aula 11 - Espaçamentos', 'EuD1pqDX2v4')">Aula 11 - Espaçamentos</li>
+              <li onclick="loadVideo('Aula 12 - Margens', '84QJPdUG4u8')">Aula 12 - Margens</li>
               <li onclick="loadVideo('Aula 13 - Padding', '75OeOlOvwNs')">Aula 13 - Padding</li>
-              <!-- adicione mais aulas aqui -->
+              
           </ul>
       </div>
       <div class="tema">
           <strong>03 - CAMPOS</strong>
           <ul>
-              <li onclick="loadVideo('14 - Checkbox ', '')">14 - Checkbox </li>
-              <li onclick="loadVideo('15 - Date E Time', '')">15 - Date E Time</li>
-              <li onclick="loadVideo('16 - File - Campo De Arquivos ', '')">16 - File - Campo De Arquivos</li>
-              <li onclick="loadVideo('17 - Hidden - O Campo Invisível ', '')">17 - Hidden - O Campo Invisível</li>
-              <li onclick="loadVideo('18 - Number - Campo De Número ', '')">18 - Number - Campo De Número</li>
-              <li onclick="loadVideo('19 - Range ', '')">19 - Range</li>
-              <li onclick="loadVideo('20 - Email E Urls ', '')">20 - Email E Urls</li>
-              <!-- adicione mais aulas aqui -->
+              <li onclick="loadVideo('Aula 14 - Checkbox', 'sscMXpDvOqQ')">Aula 14 - Checkbox</li>
+              <li onclick="loadVideo('Aula 15 - Date E Time', '2YoJmNT5ryc')">Aula 15 - Date E Time</li>
+              <li onclick="loadVideo('Aula 16 - File - Campo De Arquivos ', 'FrGbPBL419E')">Aula 16 - File - Campo De Arquivos</li>
+              <li onclick="loadVideo('Aula 17 - Hidden - O Campo Invisível', '2zcBQPdRtFg')">Aula 17 - Hidden - O Campo Invisível</li>
+              <li onclick="loadVideo('Aula 18 - Number - Campo De Número', 'lwg86XPj_Sw')">Aula 18 - Number - Campo De Número</li>
+              <li onclick="loadVideo('Aula 19 - Range', 'mOYvo6IOI_0')">Aula 19 - Range</li>
+              <li onclick="loadVideo('Aula 20 - Email E Urls', '9Ro17WyVx8g')">Aula 20 - Email E Urls</li>
+              
           </ul>
       </div>
       <div class="tema">
           <strong>04 - RECONSTRUINDO O YOUTUBE</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Formatação de Texto', '')">Aula 01 - Formatação de Texto</li>
-              <li onclick="loadVideo('Aula 02 - Listas', '')">Aula 02 - Listas</li>
-              <!-- adicione mais aulas aqui -->
+              <li onclick="loadVideo('Aula 21 - Ícones E Imagens', 'uBT6ZxfCEAU')">Aula 21 - Ícones E Imagens</li>
+              <li onclick="loadVideo('Aula 22 - Cabeçalho', 'bHruPHCe2ac')">Aula 22 - Cabeçalho</li>
+              <li onclick="loadVideo('Aula 23 - Cabeçalho', 'xbCp4MEBoUc')">Aula 23 - Cabeçalho</li>
+              <li onclick="loadVideo('Aula 24 - Lateral part1', '_y3N52CPi6o')">Aula 24 - Lateral part1</li>
+              <li onclick="loadVideo('Aula 25 - Lateral part2', 'zQoc-PcGp7E')">Aula 25 - Lateral part2</li>
+              <li onclick="loadVideo('Aula 26 - Lateral part3', '_oAbioZaAnM')">Aula 26 - Lateral part3</li>
+              <li onclick="loadVideo('Aula 27 - Meio part1', 'dzN_bwjFzOY')">Aula 27 - Meio part1</li>
+              <li onclick="loadVideo('Aula 28 - Meio part2', '')">Aula 28 - Meio part2</li>
+              <li onclick="loadVideo('Aula 29 - Vídeos part1', '')">Aula 29 - Vídeos part1</li>
+              <li onclick="loadVideo('Aula 30 - Vídeos part2', '')">Aula 30 - Vídeos part2</li>
+              <li onclick="loadVideo('Aula 31 - Vídeos part3', '')">Aula 31 - Vídeos part3</li>
+              
           </ul>
       </div>
       <div class="tema">
           <strong>05 - FLEXBOX</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Formatação de Texto', '')">Aula 01 - Formatação de Texto</li>
-              <li onclick="loadVideo('Aula 02 - Listas', '')">Aula 02 - Listas</li>
-              <!-- adicione mais aulas aqui -->
+              <li onclick="loadVideo('Aula  32 - Row E Column', '')">Aula  32 - Row E Column</li>
+              <li onclick="loadVideo('Aula 33 - Tamanhos', '')">Aula 33 - Tamanhos</li>
+              <li onclick="loadVideo('Aula 34 - Alinhamentos', '')">Aula 34 - Alinhamentos</li>
+              <li onclick="loadVideo('Aula 35 - Alinhamento De Ítens', '')">Aula 35 - Alinhamento De Ítens</li>
+              <li onclick="loadVideo('Aula 36 - Divs Flexíveis Internas', '')">Aula 36 - Divs Flexíveis Internas</li>
+              
           </ul>
       </div>
       <div class="tema">
           <strong>06 - RECONSTRUINDO O AIRBNB</strong>
           <ul>
-              <li onclick="loadVideo('Aula 01 - Formatação de Texto', '')">Aula 01 - Formatação de Texto</li>
-              <li onclick="loadVideo('Aula 02 - Listas', '')">Aula 02 - Listas</li>
-              <!-- adicione mais aulas aqui -->
+              <li onclick="loadVideo('Aula 37 - Introdução E Instalações', '')">Aula 37 - Introdução E Instalações</li>
+              <li onclick="loadVideo('Aula 38 - Topo Do Site', '')">Aula 38 - Topo Do Site</li>
+              <li onclick="loadVideo('Aula 39 - Imagem De Fundo', '')">Aula 39 - Imagem De Fundo</li>
+              <li onclick="loadVideo('Aula 40 – Menus part1', '')">Aula 40 – Menus part1</li>
+              <li onclick="loadVideo('Aula 41 – Menus part2', '')">Aula 41 – Menus part2</li>
+              <li onclick="loadVideo('Aula 42 - Meio Do Site part1', '')">Aula 42 - Meio Do Site part1</li>
+              <li onclick="loadVideo('Aula 43 - Meio Do Site part2', '')">Aula 43 - Meio Do Site part2</li>
+              <li onclick="loadVideo('Aula 44 - Meio Do Site', '')">Aula 44 - Meio Do Site</li>
+              <li onclick="loadVideo('Aula 45 – Destinos part1', '')">Aula 45 – Destinos part1</li>
+              <li onclick="loadVideo('Aula 46 – Destinos part2', '')">Aula 46 – Destinos part2</li>
+              <li onclick="loadVideo('Aula 47 - Moradias', '')">Aula 47 - Moradias</li>
+              <li onclick="loadVideo('Aula 48 - Banner - Hospedagem', '')">Aula 48 - Banner - Hospedagem</li>
+              <li onclick="loadVideo('Aula 49 - Experiências', '')">Aula 49 - Experiências</li>
+              <li onclick="loadVideo('Aula 50 - Rodapé', '')">Aula 50 - Rodapé</li>
+              
           </ul>
       </div>
       
@@ -125,6 +264,19 @@
         <p>&copy; 2025 Curso Online - Todos os direitos reservados.</p>
     </footer>
 
-    <script src="html-css.js"></script>
+    <script>
+      document.getElementById('quizForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Impede o envio do formulário
+          alert('Respostas enviadas! Verifique o seu progresso.');
+      });
+
+      function loadVideo(title, youtubeId) {
+          const videoPlayer = document.getElementById('main-video');
+          const videoTitle = document.getElementById('video-title');
+          videoTitle.textContent = title;
+          videoPlayer.src = `https://www.youtube.com/embed/${youtubeId}`;
+      }
+
+    </script>
 </body>
 </html>
