@@ -25,6 +25,8 @@
 
         h1 {
             color: #ffcc00;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
         footer {
@@ -48,10 +50,6 @@
             background-color: #f2b500;
         }
 
-        .video-container {
-            margin: 30px 0;
-        }
-
         .quizzes {
             margin-top: 40px;
             background-color: #1e2a36;
@@ -61,32 +59,30 @@
 
         h2 {
             color: #ffcc00;
+            font-size: 1.8em;
         }
 
         .container {
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 40px;
-            margin: 0 auto 50px;
             max-width: 1400px;
+            margin: 0 auto;
         }
 
         .video-player {
             flex: 4;
-            max-width: 1000px;
+            max-width: 1200px; /* ou o valor que você preferir */
             text-align: left;
         }
 
+
         .playlist {
             flex: 1;
-            max-width: 400px;
             background-color: #13222f;
             padding: 20px;
             border-radius: 8px;
             text-align: left;
-            align-self: flex-start;
         }
 
         .playlist h3,
@@ -114,14 +110,40 @@
         }
 
         #main-video {
-            height: 650px;
+            width: 100%;
+            height: 1000px;
+        }
+
+        /* Responsividade */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            
+            .playlist {
+                width: 28%;
+            }
+
+            
+        }
+
+        @media (max-width: 768px) {
+            
+
+            .playlist {
+                width: 100%;
+            }
+
+        
+        
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Curso: O Novo Programador - TYPESCRIPT</h1>
-        <br>
     </header>
 
     <main class="container">
@@ -130,7 +152,7 @@
             <h2 id="video-title">Aula 94 - Introdução</h2>
             <div id="video-container">
                 <!-- Embed do Bunny.net sem autoplay -->
-                <iframe id="main-video" width="100%" height="500"
+                <iframe id="main-video"
                     src="https://iframe.mediadelivery.net/play/468366/629c2762-f9c1-44d9-878f-a90a86559f4b"
                     frameborder="0"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -171,6 +193,7 @@
                     <li onclick="loadVideo('Aula 107 - Projeto - Login', '2e265dcc-12ab-4a75-8475-1e6adc26967c')">Aula 107 - Projeto - Login</li>
                 </ul>
             </div>
+            
         </aside>
     </main>
 
@@ -198,12 +221,8 @@
         function loadVideo(title, videoId) {
             const videoPlayer = document.getElementById('main-video');
             const videoTitle = document.getElementById('video-title');
-            
-            // Atualiza o título do vídeo
             videoTitle.textContent = title;
-            
-            // Use a URL direta do MP4, sem autoplay
-            videoPlayer.src = `https://iframe.mediadelivery.net/play/468366/${videoId}`;  // URL do vídeo sem autoplay
+            videoPlayer.src = `https://iframe.mediadelivery.net/play/468366/${videoId}`;
         }
     </script>
 </body>
