@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Novo Programador - JAVASCRIPT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a1f2b;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #0a1f2b;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #f2b500;
+        }
+
+        .video-container {
+            margin: 30px 0;
+        }
+
+        .quizzes {
+            margin-top: 40px;
+            background-color: #1e2a36;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #ffcc00;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+            margin: 0 auto 50px;
+            max-width: 1400px;
+        }
+
+
+        .video-player {
+            flex: 4; /* aumentei de 2 para 3 */
+            max-width: 1000px; /* aumentei o limite do vídeo */
+            text-align: left;
+        }
+
+
+        .playlist {
+            flex: 1;
+            max-width: 400px;
+            background-color: #13222f;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            align-self: flex-start; /* força ela a ficar no topo */
+        }
+
+
+        .playlist h3,
+        .playlist strong {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .playlist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .playlist li {
+            cursor: pointer;
+            padding: 8px;
+            color: #fff;
+            border-bottom: 1px solid #2a3b4d;
+        }
+
+        .playlist li:hover {
+            background-color: #1f3a50;
+            color: #ffcc00;
+        }
+
+        #main-video {
+            height: 650px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curso: O Novo Programador - JAVASCRIPT</h1>
+        <br>
+    </header>
+
+    <main class="container">
+  <!-- Player de vídeo principal -->
+<div class="video-player">
+    <h2 id="video-title">Aula 01 - O que é HTML?</h2>
+    <div id="video-container">
+        <!-- Embed do YouTube -->
+        <iframe id="main-video" width="100%" height="500"
+    src="https://www.youtube.com/embed/h_41"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
+
+    </div>
+</div>
+
+
+  <!-- Lista de aulas -->
+      <aside class="playlist">
+          <h3>Temas e Aulas</h3>
+        
+        <div class="tema">
+            <strong>01 - INTRODUÇÃO</strong>
+            <ul>
+                <li onclick="loadVideo('Aula  51 - Introdução', '')">Aula  51 - Introdução</li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                
+            </ul>
+        </div>
+        <div class="tema">
+            <strong>02 - BÁSICO</strong>
+            <ul>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                
+            </ul>
+        </div>
+        <div class="tema">
+            <strong>03 - INTERMEDIÁRIO</strong>
+            <ul>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>        
+                
+            </ul>
+        </div>
+        <div class="tema">
+            <strong>04 - ORIENTAÇÃO A OBJETOS</strong>
+            <ul>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>
+                <li onclick="loadVideo('', '')"></li>         
+                
+            </ul>
+        </div>
+        
+  </aside>
+</main>
+
+
+        <div class="quizzes">
+            <h2>Quiz: Teste seus conhecimentos</h2>
+            <form id="quizForm">
+                <label for="question1">O que é HTML?</label><br>
+                <input type="radio" name="question1" value="a"> Linguagem de Programação<br>
+                <input type="radio" name="question1" value="b"> Linguagem de Marcação<br>
+                <input type="radio" name="question1" value="c"> Banco de Dados<br><br>
+                
+                <button type="submit" class="btn">Enviar Respostas</button>
+            </form>
+        </div>
+    
+
+    <footer>
+        <p>&copy; 2025 Curso Online - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      document.getElementById('quizForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Impede o envio do formulário
+          alert('Respostas enviadas! Verifique o seu progresso.');
+      });
+
+      function loadVideo(title, youtubeId) {
+          const videoPlayer = document.getElementById('main-video');
+          const videoTitle = document.getElementById('video-title');
+          videoTitle.textContent = title;
+          videoPlayer.src = `https://www.youtube.com/embed/${youtubeId}`;
+      }
+
+    </script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -74,13 +73,11 @@
             max-width: 1400px;
         }
 
-
         .video-player {
-            flex: 4; /* aumentei de 2 para 3 */
-            max-width: 1000px; /* aumentei o limite do vídeo */
+            flex: 4;
+            max-width: 1000px;
             text-align: left;
         }
-
 
         .playlist {
             flex: 1;
@@ -89,9 +86,8 @@
             padding: 20px;
             border-radius: 8px;
             text-align: left;
-            align-self: flex-start; /* força ela a ficar no topo */
+            align-self: flex-start;
         }
-
 
         .playlist h3,
         .playlist strong {
@@ -129,95 +125,86 @@
     </header>
 
     <main class="container">
-  <!-- Player de vídeo principal -->
-<div class="video-player">
-    <h2 id="video-title">Aula 01 - O que é HTML?</h2>
-    <div id="video-container">
-        <!-- Embed do YouTube -->
-        <iframe id="main-video" width="100%" height="500"
-    src="https://www.youtube.com/embed/h_41"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-</iframe>
+        <!-- Player de vídeo principal -->
+        <div class="video-player">
+            <h2 id="video-title">Aula 94 - Introdução</h2>
+            <div id="video-container">
+                <!-- Embed do Bunny.net sem autoplay -->
+                <iframe id="main-video" width="100%" height="500"
+                    src="https://iframe.mediadelivery.net/play/468366/629c2762-f9c1-44d9-878f-a90a86559f4b"
+                    frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
+        <!-- Lista de aulas -->
+        <aside class="playlist">
+            <h3>Temas e Aulas</h3>
+            <div class="tema">
+                <strong>01 - INTRODUÇÃO</strong>
+                <ul>
+                    <li onclick="loadVideo('Aula 94 - Introdução', '629c2762-f9c1-44d9-878f-a90a86559f4b')">Aula 94 - Introdução</li>
+                    <li onclick="loadVideo('Aula 95 - Como Instalar', '20244f7a-9c27-453c-9e6a-9dff1ca2417b')">Aula 95 - Como Instalar</li>
+                    <li onclick="loadVideo('Aula 96 - Tsconfig', 'a1bfd006-83e8-45fb-9d6a-8a29fdc56737')">Aula 96 - Tsconfig</li>
+                    <li onclick="loadVideo('Aula 97 - Compilador', '99695105-0463-4464-8c1a-24aab1cacfdc')">Aula 97 - Compilador</li>
+                </ul>
+            </div>
+            <div class="tema">
+                <strong>02 - CONCEITOS</strong>
+                <ul>
+                    <li onclick="loadVideo('Aula 98 - Types part1', '1c5143ec-5a95-4c16-af67-f35f5dc46d8d')">Aula 98 - Types part1</li>
+                    <li onclick="loadVideo('Aula 99 - Types part2', '0b333bd3-54b3-41b3-aa78-907447b1fd18')">Aula 99 - Types part2</li>
+                    <li onclick="loadVideo('Aula 100 - Types part3', '92d4fd5d-85ed-4c0c-a664-050ff906eb92')">Aula 100 - Types part3</li>
+                    <li onclick="loadVideo('Aula 101 - Criando Types', 'eae279af-6897-4f8b-9015-2914aa2172ca')">Aula 101 - Criando Types</li>
+                    <li onclick="loadVideo('Aula 102 - Criando Interfaces', 'e9496ed2-eb9a-480d-be97-49ccc335be26')">Aula 102 - Criando Interfaces</li>
+                </ul>
+            </div>
+            <div class="tema">
+                <strong>03 - INTERMEDIÁRIO</strong>
+                <ul>
+                    <li onclick="loadVideo('Aula 103 - Como Buildar O Projeto Completo', '6b717eec-3193-472d-95d6-84d8a3d8471d')">Aula 103 - Como Buildar O Projeto Completo</li>
+                    <li onclick="loadVideo('Aula 104 - Classes part1', '85904277-69f5-4f7e-99c4-27ba0057f066')">Aula 104 - Classes part1</li>
+                    <li onclick="loadVideo('Aula 105 - Classes part2', '062d847a-ac98-4393-974b-ef3c1e4d9866')">Aula 105 - Classes part2</li>
+                    <li onclick="loadVideo('Aula 106 - Projeto - Calculadora', '9a55b691-1d96-4496-85ad-c1f682171158')">Aula 106 - Projeto - Calculadora</li>
+                    <li onclick="loadVideo('Aula 107 - Projeto - Login', '2e265dcc-12ab-4a75-8475-1e6adc26967c')">Aula 107 - Projeto - Login</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <div class="quizzes">
+        <h2>Quiz: Teste seus conhecimentos</h2>
+        <form id="quizForm">
+            <label for="question1">O que é HTML?</label><br>
+            <input type="radio" name="question1" value="a"> Linguagem de Programação<br>
+            <input type="radio" name="question1" value="b"> Linguagem de Marcação<br>
+            <input type="radio" name="question1" value="c"> Banco de Dados<br><br>
+            <button type="submit" class="btn">Enviar Respostas</button>
+        </form>
     </div>
-</div>
-
-
-  <!-- Lista de aulas -->
-      <aside class="playlist">
-          <h3>Temas e Aulas</h3>
-        
-        <div class="tema">
-            <strong>01 - INTRODUÇÃO</strong>
-            <ul>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                
-            </ul>
-        </div>
-        <div class="tema">
-            <strong>02 - CONCEITOS</strong>
-            <ul>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                
-            </ul>
-        </div>
-        <div class="tema">
-            <strong>03 - INTERMEDIÁRIO</strong>
-            <ul>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>
-                <li onclick="loadVideo('', '')"></li>           
-                
-            </ul>
-        </div>
-        <div class="tema">
-            <strong>07 - RECONSTRUINDO O FACEBOOK</strong>
-            <ul  
-  </aside>
-</main>
-
-
-        <div class="quizzes">
-            <h2>Quiz: Teste seus conhecimentos</h2>
-            <form id="quizForm">
-                <label for="question1">O que é HTML?</label><br>
-                <input type="radio" name="question1" value="a"> Linguagem de Programação<br>
-                <input type="radio" name="question1" value="b"> Linguagem de Marcação<br>
-                <input type="radio" name="question1" value="c"> Banco de Dados<br><br>
-                
-                <button type="submit" class="btn">Enviar Respostas</button>
-            </form>
-        </div>
-    
 
     <footer>
         <p>&copy; 2025 Curso Online - Todos os direitos reservados.</p>
     </footer>
 
     <script>
-      document.getElementById('quizForm').addEventListener('submit', function(event) {
-          event.preventDefault(); // Impede o envio do formulário
-          alert('Respostas enviadas! Verifique o seu progresso.');
-      });
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            alert('Respostas enviadas! Verifique o seu progresso.');
+        });
 
-      function loadVideo(title, youtubeId) {
-          const videoPlayer = document.getElementById('main-video');
-          const videoTitle = document.getElementById('video-title');
-          videoTitle.textContent = title;
-          videoPlayer.src = `https://www.youtube.com/embed/${youtubeId}`;
-      }
-
+        function loadVideo(title, videoId) {
+            const videoPlayer = document.getElementById('main-video');
+            const videoTitle = document.getElementById('video-title');
+            
+            // Atualiza o título do vídeo
+            videoTitle.textContent = title;
+            
+            // Use a URL direta do MP4, sem autoplay
+            videoPlayer.src = `https://iframe.mediadelivery.net/play/468366/${videoId}`;  // URL do vídeo sem autoplay
+        }
     </script>
 </body>
 </html>
