@@ -11,6 +11,12 @@
             box-sizing: border-box;
         }
 
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #0a1f2b;
@@ -72,10 +78,9 @@
 
         .video-player {
             flex: 4;
-            max-width: 1200px; /* ou o valor que você preferir */
+            max-width: 1200px;
             text-align: left;
         }
-
 
         .playlist {
             flex: 1;
@@ -109,9 +114,17 @@
             color: #ffcc00;
         }
 
+        /* Corrigir o layout do vídeo */
+        #video-container {
+            margin: 0;
+            padding: 0;
+        }
+
         #main-video {
             width: 100%;
-            height: 1000px;
+            height: 650px; /* Ajuste a altura conforme necessário */
+            border: none;
+            display: block;
         }
 
         /* Responsividade */
@@ -121,23 +134,15 @@
                 justify-content: space-between;
             }
 
-            
             .playlist {
                 width: 28%;
             }
-
-            
         }
 
         @media (max-width: 768px) {
-            
-
             .playlist {
                 width: 100%;
             }
-
-        
-        
         }
     </style>
 </head>
@@ -151,8 +156,7 @@
         <div class="video-player">
             <h2 id="video-title">Aula 94 - Introdução</h2>
             <div id="video-container">
-                <!-- Embed do Bunny.net sem autoplay -->
-                <iframe id="main-video"
+                <iframe id="main-video" 
                     src="https://iframe.mediadelivery.net/play/468366/629c2762-f9c1-44d9-878f-a90a86559f4b"
                     frameborder="0"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -193,7 +197,7 @@
                     <li onclick="loadVideo('Aula 107 - Projeto - Login', '2e265dcc-12ab-4a75-8475-1e6adc26967c')">Aula 107 - Projeto - Login</li>
                 </ul>
             </div>
-            
+
         </aside>
     </main>
 
